@@ -30,3 +30,6 @@ A simple, beginner-friendly web implementation of the classic Teen Patti card ga
 - **CSS3**: Variables, Flexbox, 3D Transforms (Perspective, RotateY), and Media Queries.
 - **JavaScript (ES6+)**: `async/await`, `fetch` API, and event handling.
 - **API**: Powered by [Deck of Cards API](https://deckofcardsapi.com/).
+
+## Try it out :)
+## Live Link: https://3patti-abzt.vercel.app/
