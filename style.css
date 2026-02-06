@@ -239,12 +239,34 @@ button:disabled {
     }
 
     .modal-content {
-        width: 95%;
-        padding: 20px;
+        width: 90%;
+        padding: 25px 20px;
+        max-height: 85vh;
+        /* Prevent modal from exceeding screen height */
+        overflow-y: auto;
+        /* Allow scrolling within modal */
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 15px;
+        font-size: 32px;
+        /* Larger for touch */
+        z-index: 10;
+        color: rgba(255, 255, 255, 0.9);
+        background: rgba(0, 0, 0, 0.3);
+        /* Subtle background for visibility */
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 50%;
+        text-align: center;
     }
 
     .modal-content h2 {
         font-size: 20px;
+        margin-top: 10px;
+        /* Make space for close button */
     }
 
     .rules-list li {

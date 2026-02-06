@@ -28,6 +28,21 @@ async function drawCards() {
 }
 
 function renderCards() {
+    const existingElements = cardsContainer.querySelectorAll('.card-container');
+
+    // If we have existing cards, update them instead of rebuilding (Prevents flicker)
+    if (existingElements.length === currentCards.length) {
+        existingElements.forEach((el, index) => {
+            const img = el.querySelector('.card-front .card-img');
+            img.src = currentCards[index].image;
+            img.alt = currentCards[index].code;
+            // Ensure flip class is removed if for some reason it stuck (safety)
+            el.classList.remove('flip');
+        });
+        return;
+    }
+
+    // Initial build
     cardsContainer.innerHTML = currentCards.map(card => `
         <div class="card-container">
             <div class="card-inner">
