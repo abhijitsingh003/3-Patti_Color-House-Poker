@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Patti: Color House Poker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <div id="cards-container">
+            <!-- Cards will be injected here with 3D structure -->
+        </div>
+        <div class="controls">
+            <button id="show-btn">Show</button>
+            <button id="reset-btn">Reset</button>
+            <button id="rules-btn">Rules</button>
+        </div>
+    </div>
+
+    <!-- Rules Modal -->
+    <div id="rules-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Hand Rankings</h2>
+            <ul class="rules-list">
+                <li>
+                    <strong>1. Trail (Three of a Kind)</strong>
+                    <span>Three cards of the exact same rank (like three Aces). This is the rarest and most powerful
+                        hand you can get.</span>
+                    <div class="example">Ex: A♠ A♥ A♣ (Best), 2♠ 2♦ 2♣ (Lowest Trail)</div>
+                </li>
+                <li>
+                    <strong>2. Pure Sequence (Straight Flush)</strong>
+                    <span>Three consecutive cards that belong to the same color house (Suit). They must match in color
+                        and order.</span>
+                    <div class="example">Ex: A♥ K♥ Q♥ (Highest), 4♠ 3♠ 2♠ (Lowest)</div>
+                </li>
+                <li>
+                    <strong>3. Sequence (Straight)</strong>
+                    <span>Three consecutive cards (like 4, 5, 6). You can put cards from different color houses (Suits)
+                        here.</span>
+                    <div class="example">Ex: A♠ K♦ Q♣ (Highest), 5♥ 4♠ 3♦ (Lowest)</div>
+                </li>
+                <li>
+                    <strong>4. Color (Flush)</strong>
+                    <span>All three cards belong to the same color house (e.g., all Hearts), but they are not in a
+                        sequential order.</span>
+                    <div class="example">Ex: A♦ K♦ J♦ (High Card matters), 2♠ 5♠ 9♠</div>
+                </li>
+                <li>
+                    <strong>5. Pair (Two of a Kind)</strong>
+                    <span>Two cards hold the same rank (e.g., two Kings). If two players have a pair, the higher pair
+                        wins.</span>
+                    <div class="example">Ex: A♠ A♣ K♥ (Beats A-A-J), 8♦ 8♠ J♣</div>
+                </li>
+                <li>
+                    <strong>6. High Card</strong>
+                    <span>If you have none of the above, your highest single card determines your strength against
+                        others.</span>
+                    <div class="example">Ex: A♠ (Wins against K, Q, J, etc.)</div>
+                </li>
+            </ul>
+            <p class="enjoy"><strong>Goal:</strong> Get the best hand possible!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
