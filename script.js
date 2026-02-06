@@ -54,9 +54,17 @@ function renderCards() {
 }
 
 showBtn.addEventListener('click', () => {
-    document.querySelectorAll('.card-container').forEach((card, i) => {
+    const cards = document.querySelectorAll('.card-container');
+
+    // Flip cards over
+    cards.forEach((card, i) => {
         setTimeout(() => card.classList.add('flip'), i * 100);
     });
+
+    // Auto-flip back after 5 seconds (Anti-cheat)
+    setTimeout(() => {
+        cards.forEach(card => card.classList.remove('flip'));
+    }, 5000);
 });
 
 resetBtn.addEventListener('click', async () => {
