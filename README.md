@@ -1,6 +1,6 @@
 # 3 Patti: Color House Poker ♠️♥️
 
-A modern, mobile-responsive web implementation of the classic Teen Patti card game, re-imagined with beginner-friendly rules and a sleek "dark forest" aesthetic.
+A simple, beginner-friendly web implementation of the classic Teen Patti card game.
 
 ## 🌟 Features
 
